@@ -27,7 +27,7 @@ group customers into four categories based on their purchase amounts and product
 calculate the average sales of each car over the last three months.
 
 ## STEP3: Database schema
-Table     	   Purpose       	Key Columns	                                                                            Example Row
+### Table     	   Purpose       	Key Columns	                                                                            Example Row
 Customers 	   Customer info 	Customers-id (PK),name, regions	                                                        1001,Bebeto, USA
 Products  	   Cars catalog  	Products-id (PK), name, category 	                                                      2001,Range Rover, SUV
 Transactions	 Record sales	  Transaction-id (PK),Customers-id(FK),Products-id(FK),Sellers-id(FK),Sales/date,Amount  	4001,1001,2001,3001,2025-01-15,25,000,000.

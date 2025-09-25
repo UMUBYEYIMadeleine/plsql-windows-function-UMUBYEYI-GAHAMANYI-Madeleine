@@ -1,6 +1,6 @@
 # plsql-windows-function-UMUBYEYI-GAHAMANYI-Madeleine
 PL/SQL window function assignment auca 26/09/2025 
-## Automotive tetail business
+## Automotive Retail business
 ## STEP1:PROBLEM DEFINITION
 ### Business context
  ### company type:
@@ -27,13 +27,13 @@ group customers into four categories based on their purchase amounts and product
 calculate the average sales of each car over the last three months.
 
 ## STEP3: Database schema
-### Table     	   Purpose       	Key Columns	                                                                            Example Row
-Customers 	   Customer info 	Customers-id (PK),name, regions	                                                        1001,Bebeto, USA
-Products  	   Cars catalog  	Products-id (PK), name, category 	                                                      2001,Range Rover, SUV
-Transactions	 Record sales	  Transaction-id (PK),Customers-id(FK),Products-id(FK),Sellers-id(FK),Sales/date,Amount  	4001,1001,2001,3001,2025-01-15,25,000,000.
-Sellers     	 Sellers info	  Sellers-id (PK), name, region, trust-marks                                             	3001,Mutagoma, USA,9.3
 
-
+| Table            | Purpose               | Key Columns                                                                      | Example Row                                |
+| ---------------- | --------------------- | -------------------------------------------------------------------------------- | ------------------------------------------ |
+| customers        | Store customer info   | `customer_id (PK)`, name, region                                                 | `1001, Bebeton, USA`                       |
+| products         | Store vehicle catalog | `product_id (PK)`, name, category                                                | `2001, Range Rover, SUV`                   |
+| transactions     | Record sales          | `transaction_id (PK)`, `customer_id (FK)`, `product_id (FK)`, sale\_date, amount | `3001, 1001, 2001, 2025-01-15, 25,000,000` |
+ 
 ## ER Diagram
 
 <img width="1052" height="660" alt="image" src="https://github.com/user-attachments/assets/4fc5981b-708f-4c23-8173-f995442df61f" />
@@ -44,6 +44,8 @@ Sellers     	 Sellers info	  Sellers-id (PK), name, region, trust-marks         
 in business of buying and selling cars requires market analysing  to understand demand and profitable niches,identifying and acquiring inventory through auctions or private sellers we need to prepare vehicle details and minor repairs, accurate and honest pricing for any customer we have,effective marketing and sales using online platform and personal connection and hindling legal and administrative tasks like title,bills of sales and financing option and my business is scalable for full time opertions.
 ### diagnostic analysis(why):
 in business of buying and selling cars operation involves comprehensive assessment using SWOT analysis is strength,weakness,opportunities and threats use need use this SWOT to analyse identify area  like market conditions,competitions,operational efficiency,financial management and technological adoption.in this diagnostic analysis include setting clear objective finally implementing action s to improve performance and achieve goals.
+###  Perspective analysis(what next):
+buying and selling cars business determine rewarding venture,but requires a thorough understanding pf market trends,keen negotiation skills and we have strong financial displine ensures profitability.success hinges on sourcing undervalued vehicles,estimating repair cost accurately to maintain profity margins,preparings the cars professionally and building trust with buyers through transparency and acknowledge of the cars you offer.and use online platforms for marketing and careful research into consumer demand like the shift from diesel to hybrid or another electronic cars these are critical for our success for the future.
 
 
 

@@ -1,10 +1,14 @@
 # plsql-windows-function-UMUBYEYI-GAHAMANYI-Madeleine
 PL/SQL window function assignment auca 26/09/2025 
+## Automotive tetail business
 ## STEP1:PROBLEM DEFINITION
 ### Business context
-### company type small company that sells and buys car.
--department:sales and procurement. 
--industry:Automotive retail.
+ ### company type:
+ small company that sells and buys car.
+### department:
+sales and procurement. 
+### industry:
+Automotive retail(business of buying and selling cars and related services to end customers).
 ### Data Challenge 
 in the business of buying and selling cars right now does not clearly to know which cars sells faster and give me more profit.decisions are often made based only on guesswork,this is cause of some cars to stay long time in the garage and its lose value,while others sells quickly.without good data, its hard to decide the best cars to buy and the right price to sells.
 ### Expected outcomes
@@ -18,17 +22,17 @@ Determine calculate the total sales for each month across all vehicles,the purpo
 ### Month over month growth-LAG() LEAD()
 Compare this month's sales with the previous month's for each cars, measure sales growth or decline and spot trends in cars.
 ### Customer quartiles
-group customers into four categories based on their purchase amounts
+group customers into four categories based on their purchase amounts and product nedeed.
 ### 3 month moving averages
-calculate the average sales of each vehicle over the last three months
+calculate the average sales of each car over the last three months.
 
 ## STEP3: Database schema
+Table	Purpose	Key Columns	Example Row
+Customers	Customer info	Customers-id (PK),name, regions	1001,Bebeto, USA
+Products	Cars catalog	Products-id (PK), name, category 	2001,Range Rover, SUV
+Transactions	Record sales	 Transaction-id (PK),Customers-id(FK),Products-id(FK),Sellers-id(FK),Sales/date,Amount	4001,1001,2001,3001,2025-01-15,25,000,000.
+Sellers	Sellers info	Sellers-id (PK), name, region, trust-marks	3001,Mutagoma, USA,9.3
 
-| Table          Purpose               | Key Columns                                                                      | Example Row                                |
-| -------------  --------------------- | -------------------------------------------------------------------------------- | ------------------------------------------ |
-| customers      Store customer info   | `customer_id (PK)`, name, region                                                 | `1001, Bebeto mutagoma, USA`               |
-| products     | Store vehicle catalog | `product_id (PK)`, name, category                                                | `2001, Range Rover, SUV`                   |
-| transactions | Record sales          | `transaction_id (PK)`, `customer_id (FK)`, `product_id (FK)`, sale\_date, amount | `3001, 1001, 2001, 2025-01-15, 25,000,000` |
 
 ## ER Diagram
 

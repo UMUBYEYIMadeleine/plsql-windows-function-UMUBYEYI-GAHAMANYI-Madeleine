@@ -2,7 +2,7 @@
 PL/SQL window function assignment auca 26/09/2025 
 ## STEP1:PROBLEM DEFINITION
 ### Business context
--company type:small company that sells and buys car.
+### company type small company that sells and buys car.
 -department:sales and procurement. 
 -industry:Automotive retail.
 ### Data Challenge 

@@ -35,7 +35,8 @@ calculate the average sales of each car over the last three months.
 | sellers       | Store seller info  | `seller_id (PK)`, `name`, `contact`, `region`                              | `4001, Mutagoma, +241788888888, Kigali` |
 ## ER Diagram
 
-<img width="1052" height="660" alt="image" src="https://github.com/user-attachments/assets/4fc5981b-708f-4c23-8173-f995442df61f" />
+<img width="1898" height="892" alt="image" src="https://github.com/user-attachments/assets/92686099-b352-447e-b681-9f86d143f80f" />
+
 
 ## STEP5: Result analysis
 

@@ -27,13 +27,13 @@ group customers into four categories based on their purchase amounts and product
 calculate the average sales of each car over the last three months.
 
 ## STEP3: Database schema
+| Table         | Purpose               | Key Columns                                                                         | Example Row                                |
+|---------------|------------------  -  |----------------------------------------------------------------------------         |----------------------------------------- --|
+| customers     | Store customer info   | `customer_id (PK)`, `name`, `region`                                                | `1001, John Doe, Kigali`                   |
+| products      | Store vehicle catalog | `product_id (PK)`, `name`, `category`                                               | `2001, Toyota Corolla, Sedan`              |
+| transactions  | Record sales          | `transaction_id (PK)`, `customer_id (FK)`, `product_id (FK)`, `sale_date`, `amount` | `3001, 1001, 2001, 2025-01-15, 25,000,000` |
+| sellers       | Store seller info     | `seller_id (PK)`, `name`, `contact`, `region`                                       | `4001, Alice Motors, +250788888888, Kigali`|
 
-| Table            | Purpose               | Key Columns                                                                      | Example Row                                |
-| ---------------- | --------------------- | -------------------------------------------------------------------------------- | ------------------------------------------ |
-| customers        | Store customer info   | `customer_id (PK)`, name, region                                                 | `1001, Bebeton, USA`                       |
-| products         | Store vehicle catalog | `product_id (PK)`, name, category                                                | `2001, Range Rover, SUV`                   |
-| transactions     | Record sales          | `transaction_id (PK)`, `customer_id (FK)`, `product_id (FK)`, sale\_date, amount | `3001, 1001, 2001, 2025-01-15, 25,000,000` |
- 
 ## ER Diagram
 
 <img width="1052" height="660" alt="image" src="https://github.com/user-attachments/assets/4fc5981b-708f-4c23-8173-f995442df61f" />

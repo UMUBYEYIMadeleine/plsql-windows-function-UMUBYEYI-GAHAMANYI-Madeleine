@@ -52,7 +52,7 @@ calculate the average sales of each car over the last three months.
 FROM customer;
 ## Screenshot
 <img width="1600" height="765" alt="image" src="https://github.com/user-attachments/assets/5e9b1720-9b6e-486e-b643-190330001322" />
-## aggregate
+## Aggregate
 ## query 
 ### // window function for calculating aggregate running_avg_products_price for each customer odering products
 ### SELECT 

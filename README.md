@@ -41,16 +41,15 @@ calculate the average sales of each car over the last three months.
 ## ranking
 ## query
 ### // Window function ranking products by products_price per products_category
- ### SELECT 
-    product_id,
-    product_name,
-    product_category,
-    product_price,
-    ROW_NUMBER() OVER (PARTITION BY product_category ORDER BY product_price DESC) AS row_num,
-    RANK() OVER (PARTITION BY product_category ORDER BY product_price DESC) AS rank_,
-    DENSE_RANK() OVER (PARTITION BY product_category ORDER BY product_price DESC) AS dense_rank_,
-    PERCENT_RANK() OVER (PARTITION BY product_category ORDER BY product_price DESC) AS percent_rank
-FROM products;
+### SELECT 
+    customer_id,
+    customer_name,
+    customer_region,
+    ROW_NUMBER() OVER (PARTITION BY customer_region ORDER BY customer_name DESC) AS row_num,
+    RANK() OVER (PARTITION BY customer_region ORDER BY customer_name DESC) AS rank_,
+    DENSE_RANK() OVER (PARTITION BY customer_region ORDER BY customer_name DESC) AS dense_rank_,
+    PERCENT_RANK() OVER (PARTITION BY customer_region ORDER BY customer_name DESC) AS percent_rank
+FROM customer;
 ## Screenshot
 <img width="1600" height="685" alt="image" src="https://github.com/user-attachments/assets/93be6b8b-eaa6-42a7-bd22-30179ce98d21" />
 

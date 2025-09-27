@@ -118,6 +118,34 @@ ORDER BY c.customer_id, t.sales_date;
 
 <img width="1600" height="695" alt="image" src="https://github.com/user-attachments/assets/301493eb-d537-4afa-b9b0-ca2829d7e071" />
 
+## Distribution
+
+## query
+
+## find average use to calculate quantile and cume 
+
+### SELECT 
+
+  sub.customer_id,
+  sub.avg_products_price,
+  NTILE(4) OVER (ORDER BY sub.avg_products_price DESC) AS products_price_quantile,
+  CUME_DIST() OVER (ORDER BY sub.avg_products_price DESC) AS products_price_cume_dist
+FROM (
+  SELECT
+    t.customer_id,
+    AVG(p.products_price) AS avg_products_price
+  FROM
+    transactions t
+  JOIN
+    products p ON t.products_id = p.products_id
+  GROUP BY
+    t.customer_id
+) sub
+ORDER BY 
+  sub.avg_products_price DESC;
+  
+  ## Screenshot
+  <img width="1600" height="763" alt="image" src="https://github.com/user-attachments/assets/4601b01c-bf36-43b9-aed4-f1c622632d4e" />
 
 
 ## STEP5: Result analysis

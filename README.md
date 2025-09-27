@@ -52,7 +52,9 @@ calculate the average sales of each car over the last three months.
     PERCENT_RANK() OVER (PARTITION BY product_category ORDER BY product_price DESC) AS percent_rank
 FROM products;
 ## Screenshot
-![Uploading image.png…]()
+<img width="1600" height="685" alt="image" src="https://github.com/user-attachments/assets/93be6b8b-eaa6-42a7-bd22-30179ce98d21" />
+
+
 
 ## STEP5: Result analysis
 

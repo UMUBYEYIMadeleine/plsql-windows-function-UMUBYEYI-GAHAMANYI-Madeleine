@@ -41,9 +41,9 @@ calculate the average sales of each car over the last three months.
 ## ranking
 ## query
 ### // Window function ranking products by products_price per products_category
-### SELECT 
-    ###product_id,
-    ###product_name,
+ SELECT 
+    product_id,
+    product_name,
     product_category,
     product_price,
     ROW_NUMBER() OVER (PARTITION BY product_category ORDER BY product_price DESC) AS row_num,

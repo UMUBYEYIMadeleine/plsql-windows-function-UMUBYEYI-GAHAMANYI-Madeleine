@@ -1,4 +1,4 @@
-# plsql-windows-function-UMUBYEYI-GAHAMANYI-Madeleine
+<img width="1600" height="733" alt="image" src="https://github.com/user-attachments/assets/9e263ad0-c7f7-4df0-9f59-9d9fdbe065d6" /><img width="1600" height="765" alt="image" src="https://github.com/user-attachments/assets/eb9676a0-3ae2-4812-916d-e2f7c0fbbb02" /># plsql-windows-function-UMUBYEYI-GAHAMANYI-Madeleine
 PL/SQL window function assignment auca 26/09/2025 
 ## Automotive Retail business
 ## STEP1:PROBLEM DEFINITION
@@ -51,7 +51,28 @@ calculate the average sales of each car over the last three months.
     PERCENT_RANK() OVER (PARTITION BY customer_region ORDER BY customer_name DESC) AS percent_rank
 FROM customer;
 ## Screenshot
-<img width="1600" height="685" alt="image" src="https://github.com/user-attachments/assets/93be6b8b-eaa6-42a7-bd22-30179ce98d21" />
+<img width="1600" height="765" alt="image" src="https://github.com/user-attachments/assets/5e9b1720-9b6e-486e-b643-190330001322" />
+## aggregate
+## query 
+### // window function for calculating aggregate running_avg_products_price for each customer odering products
+SELECT 
+    t.transactions_id, 
+    p.products_id,
+    c.customer_id,
+    p.products_name,
+    t.sales_date,
+    AVG(p.products_price) OVER (
+        PARTITION BY c.customer_id 
+        ORDER BY p.products_price 
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS running_avg_products_price
+FROM products p
+JOIN transactions t ON t.products_id = p.products_id
+JOIN customer c ON t.customer_id = c.customer_id
+ORDER BY c.customer_id, t.sales_date;
+## Screenshot
+<img width="1600" height="733" alt="image" src="https://github.com/user-attachments/assets/d07c24f2-f2fb-40d6-80a9-5c402e86793b" />
+
 
 
 

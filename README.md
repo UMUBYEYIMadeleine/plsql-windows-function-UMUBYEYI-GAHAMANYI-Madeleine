@@ -78,6 +78,44 @@ ORDER BY c.customer_id, t.sales_date;
 ## Screenshot
 <img width="1600" height="733" alt="image" src="https://github.com/user-attachments/assets/d07c24f2-f2fb-40d6-80a9-5c402e86793b" />
 
+## Navigate
+
+## query
+
+### // navigate window function can prove if product_price is improve or decline
+
+### SELECT 
+
+    t.transactions_id, 
+    p.products_id,
+    c.customer_id,
+    p.products_name,
+    p.products_price,
+    TO_CHAR(t.sales_date, 'DD-MON-YYYY') AS sales_date,
+    LAG(p.products_price) OVER (
+        PARTITION BY c.customer_id 
+        ORDER BY t.sales_date
+    ) AS prev_products_price,
+    LEAD(p.products_price) OVER (
+        PARTITION BY c.customer_id 
+        ORDER BY t.sales_date
+    ) AS next_products_price
+FROM (
+    SELECT 3001 AS transactions_id, 2001 AS products_id, 1001 AS customer_id, 'Range Rover' AS products_name, 700000000 AS products_price, TO_DATE('15-JAN-2025','DD-MM-YYYY') AS sales_date FROM dual
+    UNION ALL
+    SELECT 3002, 2002, 1001, 'Toyota', 100000000, TO_DATE('28-FEB-2025','DD-MM-YYYY') FROM dual
+    UNION ALL
+    SELECT 3003, 2003, 1001, 'Carina', 90000000, TO_DATE('30-DEC-2025','DD-MM-YYYY') FROM dual 
+    UNION ALL
+    SELECT 3004, 2004, 1004, 'Lambogin' 400000000, TO_DATE('25-OCT-2025','DD-MM-YYYY') FROM dual
+) t
+JOIN customer c ON t.customer_id = c.customer_id
+JOIN products p ON t.products_id = p.products_id
+ORDER BY c.customer_id, t.sales_date;
+
+## Screenshot
+
+<img width="1600" height="695" alt="image" src="https://github.com/user-attachments/assets/301493eb-d537-4afa-b9b0-ca2829d7e071" />
 
 
 

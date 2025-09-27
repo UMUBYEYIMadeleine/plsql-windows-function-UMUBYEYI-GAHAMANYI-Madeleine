@@ -131,7 +131,7 @@ ORDER BY c.customer_id, t.sales_date;
   NTILE(4) OVER (ORDER BY sub.avg_products_price DESC) AS products_price_quantile,
   CUME_DIST() OVER (ORDER BY sub.avg_products_price DESC) AS products_price_cume_dist
 FROM (
-  SELECT
+  ## SELECT
     t.customer_id,
     AVG(p.products_price) AS avg_products_price
   FROM

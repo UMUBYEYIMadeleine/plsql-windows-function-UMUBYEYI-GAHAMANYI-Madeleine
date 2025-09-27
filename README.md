@@ -14,7 +14,7 @@ in the business of buying and selling cars right now does not clearly to know wh
 ### Expected outcomes
 Identify which car models sells the faster in the market,recommend the best price to buy cars and the best price to sell them,reduce the time cars stay unsold and increase total profit.
 
-## STEP2:Success criteria
+## STEP2:Success criteria  
 ### Top 5 cars per region/quater-RANK()
 identify the 5 most sold vehicles in each region in each region every quater,its helps to understand which cars are most popular and plan stock efficient.
 ### Running monthly sales totals-SUM() OVER()
@@ -30,13 +30,29 @@ calculate the average sales of each car over the last three months.
 | Table         | Purpose             | Key Columns                                                                 | Example Row                                |
 |---------------|-------------------|----------------------------------------------------------------------------|-------------------------------------------|
 | customers     | Store customer info | `customer_id (PK)`, `name`, `region`                                       | `1001, Bebeto, USA`                  |
-| products      | Store vehicle catalog | `product_id (PK)`, `name`, `category`                                     | `2001, Range Rover, SUV`             |
+| products      | Store vehicle catalog | `product_id (PK)`, `name`, `category`,'price'                                     | `2001, Range Rover, SUV`             |
 | transactions  | Record sales       | `transaction_id (PK)`, `customer_id (FK)`, `product_id (FK)`, `sale_date`, `amount` | `3001, 1001, 2001, 2025-01-15, 25,000,000` |
 | sellers       | Store seller info  | `seller_id (PK)`, `name`, `contact`, `region`                              | `4001, Mutagoma, +241788888888, Kigali` |
 ## ER Diagram
 
 <img width="1898" height="892" alt="image" src="https://github.com/user-attachments/assets/92686099-b352-447e-b681-9f86d143f80f" />
 
+## STEP4:Window functions implementation
+## ranking
+## query
+### // Window function ranking products by products_price per products_category
+SELECT 
+    product_id,
+    product_name,
+    product_category,
+    product_price,
+    ROW_NUMBER() OVER (PARTITION BY product_category ORDER BY product_price DESC) AS row_num,
+    RANK() OVER (PARTITION BY product_category ORDER BY product_price DESC) AS rank_,
+    DENSE_RANK() OVER (PARTITION BY product_category ORDER BY product_price DESC) AS dense_rank_,
+    PERCENT_RANK() OVER (PARTITION BY product_category ORDER BY product_price DESC) AS percent_rank
+FROM products;
+## Screenshot
+![Uploading image.png…]()
 
 ## STEP5: Result analysis
 

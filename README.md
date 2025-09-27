@@ -101,7 +101,8 @@ ORDER BY c.customer_id, t.sales_date;
         ORDER BY t.sales_date
     ) AS next_products_price
 FROM (
-    SELECT 3001 AS transactions_id, 2001 AS products_id, 1001 AS customer_id, 'Range Rover' AS products_name, 700000000 AS products_price, TO_DATE('15-JAN-2025','DD-MM-YYYY') AS sales_date FROM dual
+### SELECT
+    3001 AS transactions_id, 2001 AS products_id, 1001 AS customer_id, 'Range Rover' AS products_name, 700000000 AS products_price, TO_DATE('15-JAN-2025','DD-MM-YYYY') AS sales_date FROM dual
     UNION ALL
     SELECT 3002, 2002, 1001, 'Toyota', 100000000, TO_DATE('28-FEB-2025','DD-MM-YYYY') FROM dual
     UNION ALL

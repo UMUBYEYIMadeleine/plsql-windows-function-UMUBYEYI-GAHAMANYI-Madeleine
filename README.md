@@ -1,4 +1,4 @@
-<img width="1600" height="733" alt="image" src="https://github.com/user-attachments/assets/9e263ad0-c7f7-4df0-9f59-9d9fdbe065d6" /><img width="1600" height="765" alt="image" src="https://github.com/user-attachments/assets/eb9676a0-3ae2-4812-916d-e2f7c0fbbb02" /># plsql-windows-function-UMUBYEYI-GAHAMANYI-Madeleine
+ plsql-windows-function-UMUBYEYI-GAHAMANYI-Madeleine
 PL/SQL window function assignment auca 26/09/2025 
 ## Automotive Retail business
 ## STEP1:PROBLEM DEFINITION
@@ -55,7 +55,7 @@ FROM customer;
 ## aggregate
 ## query 
 ### // window function for calculating aggregate running_avg_products_price for each customer odering products
-SELECT 
+### SELECT 
     t.transactions_id, 
     p.products_id,
     c.customer_id,

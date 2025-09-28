@@ -207,5 +207,5 @@ https://docs.oracle.com/en/database/oracle//oracle-database/inex.html
 9.github.com
 https://github.com/
 
-10.www.drawio.com
+10.drawio.com
 https://www.drawio.com

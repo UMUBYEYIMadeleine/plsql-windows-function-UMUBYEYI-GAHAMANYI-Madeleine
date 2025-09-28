@@ -40,7 +40,7 @@ calculate the average sales of each car over the last three months.
 ## STEP4:Window functions implementation
 ## ranking
 ## query
-### // Window function ranking products by products_price per products_category
+### // Window function ranking customer by customer_name per customer_region
 ### SELECT 
     customer_id,
     customer_name,
@@ -52,6 +52,10 @@ calculate the average sales of each car over the last three months.
 FROM customer;
 ## Screenshot
 <img width="1600" height="765" alt="image" src="https://github.com/user-attachments/assets/5e9b1720-9b6e-486e-b643-190330001322" />
+
+## Interpretation
+
+These functions assigned positions to customers for each customer_region based on customer_name for everyone,ROW_NUMBER gives strict orders,RANK and DENSE_RANK helps to show customer_id for each and highest rank and dense_rank for each customer_id,PERCENT_RANK helps to show customer's quantile.
 
 ## Aggregate
 
@@ -77,6 +81,9 @@ ORDER BY c.customer_id, t.sales_date;
 
 ## Screenshot
 <img width="1600" height="733" alt="image" src="https://github.com/user-attachments/assets/d07c24f2-f2fb-40d6-80a9-5c402e86793b" />
+
+## Interpretation
+in this query helps to accumulate the average products_price particular customer using their id and order by products_price ths query can shows performance of customer at any products over time.
 
 ## Navigate
 
@@ -118,6 +125,9 @@ ORDER BY c.customer_id, t.sales_date;
 
 <img width="1600" height="695" alt="image" src="https://github.com/user-attachments/assets/301493eb-d537-4afa-b9b0-ca2829d7e071" />
 
+## Interpretation
+in this navigate query can helps to understand well business performance. its helps to show if products is improving or if its declaine and helps to know hows customer getting transactions of our products for first time and many times.
+
 ## Distribution
 
 ## query
@@ -155,7 +165,9 @@ ORDER BY
   
   ## Screenshot
   <img width="1600" height="763" alt="image" src="https://github.com/user-attachments/assets/4601b01c-bf36-43b9-aed4-f1c622632d4e" />
-
+  
+## Interpretation
+distribution query can combine different window function help us to find quantile and knows highest and lowest products_price and be able to see less than,equal or greater than to current one and total row through cummulative distribution which helps to know which is products have high and low performance and what to decide to do.
 
 ## STEP5: Result analysis
 
@@ -166,5 +178,34 @@ in business of buying and selling cars operation involves comprehensive assessme
 ###  Perspective analysis(what next):
 buying and selling cars business determine rewarding venture,but requires a thorough understanding pf market trends,keen negotiation skills and we have strong financial displine ensures profitability.success hinges on sourcing undervalued vehicles,estimating repair cost accurately to maintain profity margins,preparings the cars professionally and building trust with buyers through transparency and acknowledge of the cars you offer.and use online platforms for marketing and careful research into consumer demand like the shift from diesel to hybrid or another electronic cars these are critical for our success for the future.
 
+## STEP6:References
 
+1.freecodecamp.window functions in sql.freecodecamp news
+https://www.freecodecamp.org/news/window-functions-in-sql/
 
+2.Mode analytics_introduction to window functions
+https://mode.com/sql-tutorial/sql-window-functions/
+
+3.geeksforgeeks-sql window functions
+https://www.geeksforgeeks.org/sql/window-functions-in-sql/
+
+4.oracle database technologies appdev
+https://www.oracle.com/database/technologies/appdev/xe.html
+
+5. google search
+https://www.google.com
+
+6.ukesayy.com online buying and selling cars in pakistan
+hhps://www.ukessay.com
+
+7.oracle window function concept
+https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/analytic-functions.html
+
+8.oracle database sql turning guide
+https://docs.oracle.com/en/database/oracle//oracle-database/inex.html
+
+9.github.com
+https://github.com/
+
+10.www.drawio.com
+https://www.drawio.com

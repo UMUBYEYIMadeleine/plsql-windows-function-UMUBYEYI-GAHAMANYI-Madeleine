@@ -210,3 +210,5 @@ https://github.com/
 
 10.drawio.com
 https://www.drawio.com
+
+All sources were propery cited.implementationsvand analysis represent orginal work. no AI generated content was copied without attribution or adaptation.

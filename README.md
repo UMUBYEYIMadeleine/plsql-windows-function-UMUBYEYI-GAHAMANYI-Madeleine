@@ -136,11 +136,8 @@ ORDER BY c.customer_id, t.sales_date;
   
 FROM (
   SELECT
-  
-    t.customer_id,
-    
-    AVG(p.products_price) AS avg_products_price
-    
+        t.customer_id
+        AVG(p.products_price) AS avg_products_price
   FROM
     transactions t
     
